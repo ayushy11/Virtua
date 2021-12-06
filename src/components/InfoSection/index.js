@@ -1,23 +1,70 @@
 import React from "react";
-import { Button } from "react-scroll";
-import { InfoContainer } from "./InfoElements";
+import { Button } from "../ButtonElement";
+import {
+  InfoContainer,
+  InfoWrapper,
+  InfoRow,
+  Column1,
+  Column2,
+  ImgWrap,
+  Image,
+  TextWrapper,
+  TopLine,
+  Heading,
+  Subtitle,
+  BtnWrap,
+} from "./InfoElements";
 
-function InfoSection() {
+function InfoSection({
+  id,
+  lightBg,
+  lightText,
+  lightTextDesc,
+  topLine,
+  headline,
+  description,
+  buttonLabel,
+  imgStart,
+  img,
+  alt,
+  dark,
+  primary,
+  darkText,
+  dark2,
+}) {
   return (
     <>
-      <InfoContainer id={id}>
+      <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
-          <InfoRow>
+          <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>Info</TopLine>
-                <Heading>Heading</Heading>
-                <Subtitle>Sub Title</Subtitle>
+                <TopLine>{topLine}</TopLine>
+                <Heading lightText={lightText}>{headline}</Heading>
+                <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button to="/">Button</Button>
+                  <Button
+                    to="home"
+                    smooth="true"
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonLabel}
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
+
+            <Column2>
+              <ImgWrap>
+                <Image src={img} alt={alt} />
+              </ImgWrap>
+            </Column2>
           </InfoRow>
         </InfoWrapper>
       </InfoContainer>
