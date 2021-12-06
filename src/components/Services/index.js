@@ -1,4 +1,16 @@
 import React from "react";
+import Icon1 from "../../images/img4.svg";
+import Icon2 from "../../images/img5.svg";
+import Icon3 from "../../images/img6.svg";
+import {
+  ServicesCard,
+  ServicesContainer,
+  ServicesH1,
+  ServicesH2,
+  ServicesIcon,
+  ServicesP,
+  ServicesWrapper,
+} from "./ServiceElements";
 
 function Services() {
   return (
