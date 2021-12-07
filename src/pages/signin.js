@@ -3,7 +3,7 @@ import React from 'react'
 function SignInPage() {
     return (
         <>
-            Sign in
+            {/* Sign in */}
         </>
     )
 }
