@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import ScrollToTop from "../components/ScrollToTop";
+import Signin from "../components/Signin";
 
 function SignInPage() {
-    return (
-        <>
-            {/* Sign in */}
-        </>
-    )
+  return (
+    <>
+      <ScrollToTop />
+      <Signin />
+    </>
+  );
 }
 
-export default SignInPage
+export default SignInPage;
